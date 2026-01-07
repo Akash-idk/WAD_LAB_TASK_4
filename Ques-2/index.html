@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUIZ</title>
+  </head>
+  <body>
+    <h1>Welcome to this Interactive Quiz</h1>
+    <h4>What is the short form of Web Application Development</h4>
+
+    <input
+      type="text"
+      id="answer"
+      placeholder="Please enter your answer here"
+    />
+
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+      function checkAnswer() {
+        var userAns = document.getElementById("answer").value;
+        var correctAns = "WAD";
+
+        var result = document.getElementById("result");
+
+        if (userAns.toUpperCase() === correctAns) {
+          result.innerHTML = "Correct Answer! Well Done.";
+        } else {
+          result.innerHTML = "Incorrect Answer. Please try again.";
+        }
+      }
+    </script>
+  </body>
+</html>
